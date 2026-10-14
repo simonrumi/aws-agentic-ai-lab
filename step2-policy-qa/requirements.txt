@@ -1,0 +1,8 @@
+# Step 2 dependencies — the packages we chose, pinned to exact versions.
+# Same three as Step 1: strands-agents + boto3 for agent.py (talks to
+# Bedrock and the Knowledge Base), pytest for the unit tests.
+# requirements-lock.txt pins these plus everything they pull in; install
+# from that file. Edit this one only when upgrading on purpose.
+strands-agents==1.57.2
+boto3==1.43.108
+pytest==9.1.1

@@ -1,0 +1,17 @@
+# Blocks commits that contain secrets (AWS keys, tokens, passwords).
+# After cloning, run once: pre-commit install
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks
+
+  # Checks our Python packages against public lists of known security holes.
+  # Needs the internet, so it only runs when asked (personal laptop only):
+  #   pre-commit run pip-audit --hook-stage manual --all-files
+  - repo: https://github.com/pypa/pip-audit
+    rev: v2.10.1
+    hooks:
+      - id: pip-audit
+        args: ["-r", "step1-expense-checker/requirements-lock.txt"]
+        stages: [manual]

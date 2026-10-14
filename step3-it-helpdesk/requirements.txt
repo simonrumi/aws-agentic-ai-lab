@@ -1,0 +1,8 @@
+# Step 3 dependencies — the packages we chose, pinned to exact versions.
+# Same three as Steps 1 and 2: strands-agents + boto3 for agent.py and
+# seed_data.py (talk to Bedrock, Lambda and DynamoDB), pytest for the unit tests.
+# requirements-lock.txt pins these plus everything they pull in; install
+# from that file. Edit this one only when upgrading on purpose.
+strands-agents==1.57.2
+boto3==1.43.108
+pytest==9.1.1

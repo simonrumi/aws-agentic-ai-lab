@@ -1,0 +1,29 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets — real values live only in .env
+.env
+.env.*
+!.env.example
+
+# AWS build output
+.aws-sam/
+cdk.out/
+*.zip
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local notes with account details — never commit
+local-notes.md
+CLAUDE.local.md
+
+# Saved agent runs — error lines can hold the account ID
+run-output.txt
